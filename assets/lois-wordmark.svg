@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 294 110" width="294" height="110" fill="none" role="img" aria-label="LOIS brand asset"><style>svg{color:#21152E}</style>
+<g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M22 18 V91 H75" stroke-width="12"/>
+ <!-- clean outline geometric heart, NO inset circle; one color -->
+ <path d="M135 89 C121 77 96 57 96 39 C96 22 118 16 135 35 C152 16 174 22 174 39 C174 57 149 77 135 89 Z" stroke-width="11"/>
+ <path d="M202 18 V91" stroke-width="12"/>
+ <path d="M274 25 C265 18 250 16 239 21 C226 27 224 38 231 47 C237 55 262 55 271 64 C279 73 275 87 262 91 C248 96 232 92 222 84" stroke-width="12"/>
+</g></svg>
