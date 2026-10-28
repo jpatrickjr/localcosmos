@@ -34,13 +34,16 @@
   <nav class="nav" aria-label="Primary">
     <div class="nav-inner">
       <a class="mark" href="../"><img src="../assets/local-cosmos-white.png" alt="Local Cosmos — home" width="912" height="100" /></a>
-      <ul class="nav-links">
-        <li class="nav-extra"><a href="../#fragmented">The problem</a></li>
-        <li class="nav-extra"><a href="../#lois">LOIS</a></li>
-        <li class="nav-extra"><a href="../#ecosystem">Ecosystem</a></li>
-        <li><a href="./" aria-current="page">About</a></li>
-        <li><a class="nav-talk" href="#connect">Let's talk</a></li>
-      </ul>
+      <div class="nav-right">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="../#approach">Approach</a></li>
+          <li><a href="../#ecosystem">Ecosystem</a></li>
+          <li><a href="../tourism/">Tourism</a></li>
+          <li><a href="./" aria-current="page">About</a></li>
+        </ul>
+        <a class="nav-cta" href="#connect">Let's talk</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      </div>
     </div>
   </nav>
 
@@ -194,6 +197,7 @@
       <p>Local Cosmos · Early build and validation · Founded by Jerome Patrick Jr.</p>
       <ul>
         <li><a href="../">Home</a></li>
+        <li><a href="../tourism/">Tourism</a></li>
         <li><a href="https://meetlois.com" target="_blank" rel="noopener">LOIS</a></li>
         <li><a href="https://linkedin.com/in/jeromepatrickjr" target="_blank" rel="noopener">LinkedIn</a></li>
         <li><a href="#top">Top ↑</a></li>
@@ -202,6 +206,20 @@
   </footer>
 
   <script>
+    /* Mobile menu */
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var list = document.getElementById('nav-links');
+      if (!btn || !list) return;
+      function setOpen(open) {
+        list.classList.toggle('open', open);
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        btn.textContent = open ? 'Close' : 'Menu';
+      }
+      btn.addEventListener('click', function () { setOpen(!list.classList.contains('open')); });
+      list.addEventListener('click', function (e) { if (e.target.closest('a')) setOpen(false); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+    })();
     /* Scroll reveal. Content is visible by default; sections are only hidden
        once the observer has proven it runs, so nothing can get stuck invisible. */
     (function () {
