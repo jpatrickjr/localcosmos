@@ -882,3 +882,47 @@ h1, h2, h3 { font-weight: 400; }
 .cta-alt a:hover { text-decoration-color: var(--ivory); }
 .contact-email a { color: var(--midnight); text-decoration: underline; text-decoration-color: #BDB9AF; text-underline-offset: 4px; }
 .cta-alt a, .contact-email a { display: inline-block; padding: 0.75rem 0; }
+
+/* ---------- Tourism: services, methodology, expectations (Nov 2026) ---------- */
+.btn-ghost { border-color: var(--on-dark-faint); color: var(--ivory); }
+.btn-ghost:hover { background: var(--ivory); color: var(--midnight); }
+.hero-cta .btn-ghost { white-space: normal; }
+
+.service { margin-top: clamp(3rem, 8vw, 5.5rem); }
+.service + .service { padding-top: clamp(2.5rem, 6vw, 4rem); border-top: 1px solid var(--line-light); }
+.service-num {
+  font-family: var(--mono); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--violet);
+}
+.service-name {
+  margin-top: 0.6rem; font-family: var(--serif); font-size: clamp(2rem, 5vw, 3.4rem);
+  line-height: 1.05; letter-spacing: -0.015em; text-wrap: balance;
+}
+.service-tagline { margin-top: 0.75rem; font-size: clamp(1.1rem, 2vw, 1.35rem); color: var(--on-light-soft); max-width: 44ch; }
+.service .sprint-price-value { font-size: clamp(2.6rem, 8vw, 4.75rem); }
+.service .sprint-fine a { color: var(--violet); text-underline-offset: 3px; }
+
+.framework.six p.fw-tag {
+  margin-top: 0.9rem; font-family: var(--mono); font-size: 0.66rem; font-weight: 500;
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--on-dark-faint);
+}
+.framework.six p.fw-tag.future { color: #FFD391; }
+@media (min-width: 900px) {
+  .framework.six { grid-template-columns: repeat(3, 1fr); row-gap: 3rem; }
+  .framework.six li:nth-child(3n)::after { display: none; }
+}
+
+.expect { list-style: none; margin-top: clamp(2rem, 5vw, 3rem); border-top: 2px solid var(--midnight); }
+.expect li {
+  display: grid; grid-template-columns: 1fr; gap: 0.4rem;
+  padding: 1.35rem 0; border-bottom: 1px solid var(--line-light);
+}
+.expect-when {
+  font-family: var(--mono); font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--violet); padding-top: 0.35rem;
+}
+.expect h3 { font-family: var(--serif); font-size: clamp(1.35rem, 2.6vw, 1.75rem); line-height: 1.15; }
+.expect li p:not(.expect-when) { margin-top: 0.4rem; color: var(--on-light-soft); line-height: 1.6; max-width: 60ch; }
+@media (min-width: 768px) {
+  .expect li { grid-template-columns: 240px 1fr; gap: 2rem; }
+}
